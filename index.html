@@ -43,7 +43,7 @@
   .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
   .burger[aria-expanded="true"] span:nth-child(2){opacity:0;transform:scaleX(.2)}
   .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
-  .drawer{position:fixed;inset:0;z-index:2;visibility:hidden;transition:visibility 0s linear .4s}
+  .drawer{position:fixed;inset:0;z-index:75;visibility:hidden;transition:visibility 0s linear .4s}
   .drawer .backdrop{position:absolute;inset:0;background:rgba(0,0,0,.65);opacity:0;transition:opacity .4s}
   .drawer .panel{position:absolute;top:0;right:0;bottom:0;width:min(86vw,380px);background:#0b0f14;border-left:1px solid var(--line);padding:92px 24px 28px;display:flex;flex-direction:column;gap:2px;transform:translateX(100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);overflow-y:auto}
   .drawer .panel a:not(.btn){font-family:var(--head);font-weight:700;font-size:22px;text-decoration:none;color:var(--text);padding:14px 4px;min-height:52px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.07);opacity:0;transform:translateX(20px);transition:opacity .4s,transform .4s,color .2s}
@@ -228,9 +228,6 @@
 
 <div class="preview">Prévia de demonstração · conteúdo sujeito a ajuste</div>
 
-<!-- HERO -->
-<header class="hero" id="inicio">
-  <div class="hero-bg"><img src="img/opt/perfil-2.jpg" alt="Moto restaurada na Garagem do Brilho" fetchpriority="high"></div>
   <div class="nav" id="nav">
     <div class="wrap navrow">
       <a class="brand" href="#inicio">Garagem do <b>Brilho</b></a>
@@ -239,6 +236,7 @@
       </nav>
       <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     </div>
+  </div>
     <div class="drawer" id="menu" aria-hidden="true">
       <div class="backdrop" data-close></div>
       <nav class="panel" aria-label="Menu">
@@ -251,7 +249,10 @@
         <a class="btn full" href="https://wa.me/5563984676776?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20Garagem%20do%20Brilho%20e%20quero%20agendar%20um%20servi%C3%A7o." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm-3 6h6v1.6H9Zm0 3h4v1.6H9Z"/></svg>Agendar no WhatsApp</a>
       </nav>
     </div>
-  </div>
+
+<!-- HERO -->
+<header class="hero" id="inicio">
+  <div class="hero-bg"><img src="img/opt/perfil-2.jpg" alt="Moto restaurada na Garagem do Brilho" fetchpriority="high"></div>
   <div class="wrap hero-inner">
     <div class="eyebrow rv">Gurupi · TO</div>
     <h1 class="rv d1">Sua estética<span>automotiva é aqui</span></h1>
